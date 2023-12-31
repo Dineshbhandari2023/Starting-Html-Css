@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        title {
+            padding: 20%;
+        }
+        .container {
+            width: 100%;
+        }
+        .bar{
+            font:30px;
+            counter-reset: step;
+        }
+        .bar li {
+            font-size: 15px;
+            list-style-type: none;
+            float: left;
+            width: 20%;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+        .bar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid greenyellow;
+            text-align: center;
+            display: block;
+            margin: 0 auto 5px auto;
+            border-radius: 50%;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h2> Step Progress bar </h2>
+    <div class="container"> 
+        <ul class="bar">
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+        </ul>
+    </div>
+</body>
+</html>
